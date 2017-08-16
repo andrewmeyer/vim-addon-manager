@@ -43,7 +43,7 @@ endf
 
 let s:scm_defaults={
       \  'git': {'clone': ['vam#vcs#GitCheckoutFixDepth', []],
-      \         'update': ['vam#utils#RunShell', ['cd $p; and git pull'        ]],
+      \         'update': ['vam#utils#RunShell', ['bash -c "cd $p && git pull"'        ]],
       \          'wdrev': ['vam#utils#System',   ['git --git-dir=$p/.git rev-parse HEAD']],
       \            'log': ['vam#utils#System',   ['git --git-dir=$2p/.git log $1 $[3]..$[4]', '--pretty=format:%s%n']],
       \           'supports_shallow_clone': 'auto',
